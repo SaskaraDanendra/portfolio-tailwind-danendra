@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Danendra</title>
     <link href="dist/output.css" rel="stylesheet">
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+             document.documentElement.classList.remove('dark')
+        }
+    </script>
 </head>
 <body>
 
@@ -22,25 +29,39 @@
                         <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
                     </button>
 
-                    <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+                    <nav id="nav-menu" class="hidden absolute py-5 bg-white dark:bg-dark lg:dark:bg-transparent dark:shadow-primary shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
                         <ul class="block lg:flex">
                             <li class="group">
-                                <a href="#home" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Beranda</a>
+                                <a href="#home" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Beranda</a>
                             </li>
                             <li class="group">
-                                <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Tentang Saya</a>
+                                <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Tentang Saya</a>
                             </li>
                             <li class="group">
-                                <a href="#portfolio" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Portfolio</a>
+                                <a href="#portfolio" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Portfolio</a>
                             </li>
                             <li class="group">
-                                <a href="#clients" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Clients</a>
+                                <a href="#clients" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Clients</a>
                             </li>
                             <li class="group">
-                                <a href="#blog" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Blog</a>
+                                <a href="#blog" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Blog</a>
                             </li>
                             <li class="group">
-                                <a href="#contact" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Contact</a>
+                                <a href="#contact" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Contact</a>
+                            </li>
+                            <li class="mt-3 lg:mt-0 flex items-center pl-8">
+                                <div class="flex">
+                                    <span class="mr-2 text-sm text-slate-500">light</span>
+                                    <input type="checkbox" class="hidden" id="dark-toggle">
+                                    <label for="dark-toggle">
+                                        <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                                            <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out">
+
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <span class="ml-2 text-sm text-slate-500">dark</span>
+                                </div>
                             </li>
                         </ul>
                     </nav>
@@ -51,24 +72,24 @@
     <!-- Header Section End -->
     
     <!-- Hero Section Start -->
-    <section id="home" class="pt-36">
+    <section id="home" class="pt-36 dark:bg-dark">
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="w-full self-center px-4 lg:w-1/2">
-                    <h1 class="text-base font-semibold text-primary md:text-xl">Hallo Semua 👋, Saya <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl">Danendra Saskara Byantara</span></h1>
+                    <h1 class="text-base font-semibold text-primary md:text-xl">Hallo Semua 👋, Saya <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl dark:text-white">Danendra Saskara Byantara</span></h1>
 
-                    <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">Junior Network Administrator | Web Developer</h2>
+                    <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl dark:text-slate-300">Junior Network Administrator | Web Developer</h2>
 
-                    <p class="font-medium text-secondary mb-10 leading-relaxed">Hidup Yang Tidak Dipertaruhkan Tidak Akan Dimenangkan.</p>
+                    <p class="font-medium text-secondary mb-10 leading-relaxed dark:text-slate-400">Hidup Yang Tidak Dipertaruhkan Tidak Akan Dimenangkan.</p>
 
                     <a href="" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">Hubungi Saya</a>
                 </div>
                 <div class="w-full self-end px-4 lg:w-1/2">
                     <div class="relative mt-10 lg:mt-0 right-0">
-                        <img src="dist/img/Danendra3.png" alt="DanendraSaskara" class="max-w-full mx-auto">
-                        <span class="absolute -bottom-0 -z-10 left-1/2 -translate-x-1/2 md:scale-100">
+                        <img src="dist/img/Danendra4.png" alt="DanendraSaskara" class="relative z-10 max-w-full mx-auto">
+                        <span class="absolute -bottom-0 left-1/2 -translate-x-1/2 md:scale-100">
                               <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                                <path fill="#14b8a6" d="M50.8,-65.3C63.2,-60.9,68.7,-42.5,67.5,-26.5C66.3,-10.6,58.5,2.9,55.7,20.1C52.9,37.2,55.1,58,46.6,64.1C38.2,70.2,19.1,61.7,3.4,56.9C-12.2,52.2,-24.4,51.3,-36.9,46.5C-49.4,41.7,-62.1,33,-66.6,21.2C-71,9.4,-67.2,-5.6,-63.7,-22.1C-60.3,-38.5,-57.2,-56.5,-46.6,-61.5C-36.1,-66.5,-18,-58.5,0.6,-59.3C19.2,-60.1,38.4,-69.7,50.8,-65.3Z" transform="translate(100 100) scale(1.1)" />
+                                <path fill="#14b8a6" d="M50.8,-65.3C63.2,-60.9,68.7,-42.5,67.5,-26.5C66.3,-10.6,58.5,2.9,55.7,20.1C52.9,37.2,55.1,58,46.6,64.1C38.2,70.2,19.1,61.7,3.4,56.9C-12.2,52.2,-24.4,51.3,-36.9,46.5C-49.4,41.7,-62.1,33,-66.6,21.2C-71,9.4,-67.2,-5.6,-63.7,-22.1C-60.3,-38.5,-57.2,-56.5,-46.6,-61.5C-36.1,-66.5,-18,-58.5,0.6,-59.3C19.2,-60.1,38.4,-69.7,50.8,-65.3Z" transform="translate(100 100) scale(1.4)" />
                                 
                               </svg>
                         </span>
@@ -80,19 +101,19 @@
     <!-- Hero Section End -->
 
     <!-- About Section Start -->
-    <section id="about" class="pt-36 pb-32">
+    <section id="about" class="pt-36 pb-32 dark:bg-dark">
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="w-full px-4 mb-10 lg:w-1/2">
                     <h4 class="font-bold uppercase text-primary text-2xl mb-3">Tentang Saya</h4>
-                    <h2 class="font-bold text-dark text-3xl mb-5 max-w-xl lg:text-3xl">Seorang Mahasiswa Jurusan Sistem Informasi Di Universitas Bani Saleh</h2>
-                    <p class="font-medium text-base text-secondary max-w-md text-justify lg:text-lg">
-                        Mahasiswa aktif Semester 6 Program Studi S1 Sistem Informasi di Universitas Bani Saleh. Memiliki kemampuan dan pengetahuan dalam dasar pemrograman web menggunakan framework CodeIgniter 4, serta dasar pengembangan aplikasi Java dan Android. Menguasai penggunaan Oracle Database, desain antarmuka web dan aplikasi menggunakan Figma, Bootstrap, dan Tailwind. 
+                    <h2 class="font-bold text-dark text-3xl mb-5 max-w-xl lg:text-3xl dark:text-white">Seorang Mahasiswa Jurusan Sistem Informasi Di Universitas Bani Saleh</h2>
+                    <p class="font-medium text-base text-secondary max-w-md text-justify lg:text-lg dark:text-slate-400">
+                        Seorang Mahasiswa Program Studi S1 Sistem Informasi di Universitas Bani Saleh. Yang Memiliki kemampuan dan pengetahuan dalam dasar pemrograman web menggunakan framework CodeIgniter 4, serta dasar pengembangan aplikasi Java dan Android. Menguasai penggunaan Oracle Database, desain antarmuka web dan aplikasi menggunakan Figma, Bootstrap, dan Tailwind. 
                         Berpengalaman dalam subnetting dan routing jaringan, serta sistem integrasi ERP menggunakan SAP. Berkeinginan untuk mengembangkan kemampuan dan pengalaman di bidang Sistem Informasi dan IT di dunia industri sebagai System, Network Administrator, dan Web Developer.</p>
                 </div>
                 <div class="w-full px-4 lg:w-1/2">
-                    <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10">Mari Berteman!</h3>
-                    <p class="font-medium text-base text-secondary max-w-md mb-6 lg:text-lg text-justify">Saya senang berinteraksi dan berbagi pengetahuan dengan teman-teman di seluruh dunia. Ayo, kita bangun koneksi dan kolaborasi melalui platform sosial media! Anda bisa mengikuti saya melalui link di bawah ya! Jangan ragu untuk menghubungi saya, berdiskusi tentang proyek-proyek menarik, atau sekadar bertukar ide. Saya percaya bahwa kolaborasi dan jaringan yang kuat adalah kunci untuk kemajuan bersama. Sampai jumpa di sosial media!</p>
+                    <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10 dark:text-white">Mari Berteman!</h3>
+                    <p class="font-medium text-base text-secondary max-w-md mb-6 lg:text-lg text-justify dark:text-slate-400">Saya senang berinteraksi dan berbagi pengetahuan dengan teman-teman di seluruh dunia. Ayo, kita bangun koneksi dan kolaborasi melalui platform sosial media! Anda bisa mengikuti saya melalui link di bawah ya! Jangan ragu untuk menghubungi saya, berdiskusi tentang proyek-proyek menarik, atau sekadar bertukar ide. Saya percaya bahwa kolaborasi dan jaringan yang kuat adalah kunci untuk kemajuan bersama. Sampai jumpa di sosial media!</p>
                     <div class="flex items-center">
                         <!-- Youtube -->
                          <a href="https://youtube.com/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-400 hover:border-primary hover:bg-primary hover:text-white">
@@ -136,13 +157,13 @@
     <!-- About Section End -->
 
     <!-- Portfolio Section Start -->
-    <Section id="portfolio" class="pt-36 pb-16 bg-slate-100">
+    <Section id="portfolio" class="pt-36 pb-16 bg-slate-100 dark:bg-slate-800">
         <div class="container">
             <div class="w-full px-4">
                 <div class="max-w-4xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2">Portfolio</h4>
-                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Project Terbaru</h2>
-                    <p class="font-medium text-md text-secondary md:text-lg">Selamat datang di galeri projek terbaru saya! Di sini, Anda akan menemukan berbagai karya inovatif dan terkini yang mencerminkan keterampilan serta dedikasi saya dalam bidang pengembangan web dan aplikasi. Setiap proyek adalah hasil dari kerja keras dan kreativitas, dirancang untuk memberikan solusi efektif dan pengalaman pengguna yang luar biasa. Mari jelajahi dan temukan bagaimana setiap proyek dapat memberikan dampak positif dalam dunia teknologi.</p>
+                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Project Terbaru</h2>
+                    <p class="font-medium text-md text-secondary md:text-lg dark:text-slate-400">Selamat datang di galeri projek terbaru saya! Di sini, Anda akan menemukan berbagai karya inovatif dan terkini yang mencerminkan keterampilan serta dedikasi saya dalam bidang pengembangan web dan aplikasi. Setiap projek adalah hasil dari kerja keras dan kreativitas, dirancang untuk memberikan solusi efektif dan pengalaman pengguna yang luar biasa.</p>
                 </div>
             </div>
 
@@ -152,48 +173,50 @@
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="dist/img/portfolio/sidentah1.png" alt="sidentah" width="w-full">
                     </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Web Sistem Informasi Identitas Tanah(SIDENTAH.)</h3>
-                    <p class="font-medium text-base text-secondary text-justify">Dalam Rangka KKN Tematik PTMGRMD 2024 yang berlangsung selama 4 bulan dalam Wilayah LLDIKTI IV, Saya sebagai Penanggung Jawab Program Inovasi di Desa Mangunarga Kabupaten Sumedang Membuat sebuah Web Sistem Informasi Identitas Tanah yang dibangun menggunakan bahasa pemrograman PHP dengan framework Codeigniter 4 untuk membantu Perangkat Desa dan Masyarakat Setempat dalam upaya mendigitalisasikan pencatatan dan pencarian sebuah data sertifikat pertanahan letter C untuk memudahkan dalam pencarian dan mengamankan aset berharga milik desa. </p>
+                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Web Sistem Informasi Identitas Tanah(SIDENTAH.)</h3>
+                    <p class="font-medium text-base text-secondary text-justify dark:text-slate-400">Dalam Rangka KKN Tematik PTMGRMD 2024 yang berlangsung selama 4 bulan dalam Wilayah LLDIKTI IV, Saya sebagai Penanggung Jawab Program Inovasi di Desa Mangunarga Kabupaten Sumedang Membuat sebuah Web Sistem Informasi Identitas Tanah yang dibangun menggunakan bahasa pemrograman PHP dengan framework Codeigniter 4 untuk membantu Perangkat Desa dan Masyarakat Setempat dalam upaya mendigitalisasikan pencatatan dan pencarian sebuah data sertifikat pertanahan letter C untuk memudahkan dalam pencarian dan mengamankan aset berharga milik desa. </p>
                 </div>
                 <!-- Figma -->
                 <div class="mb-12 p-4 md:w-1/2">
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="dist/img/portfolio/figmadanen1.png" alt="figmadanen" width="w-full">
                     </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Design Mobile User Interface Aplikasi Pemesanan Hotel Kapsul Menggunakan Figma</h3>
-                    <p class="font-medium text-base text-secondary text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere officiis fugiat error repellendus recusandae consectetur alias accusamus facilis maiores placeat aspernatur itaque laborum quasi, iusto soluta qui eum iste earum sint maxime minima cum officia corporis! Esse, quod ipsam, obcaecati repudiandae quaerat sed similique consectetur aliquid aspernatur quo numquam autem. </p>
+                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Design Mobile UI & UX Aplikasi Pemesanan Hotel Kapsul</h3>
+                    <p class="font-medium text-base text-secondary text-justify dark:text-slate-400">Sebuah Project Ulangan Akhir Semester 2 Mata Kuliah Interaksi Manusia dan Komputer yang ditugaskan untuk membuat sebuah Tampilan User Interface dan User Experience mobile atau website. Saya membuat sebuah UI & UX untuk sebuah Aplikasi Pemesanan Hotel Kapsul yang bernama TURU menggunakan Figma. Aplikasi ini dirancang dengan fitur-fitur yang memudahkan pengguna dalam memesan kamar, melihat ketersediaan, serta berbagai informasi fasilitas yang disediakan oleh hotel kapsul. Tujuan dari proyek ini adalah untuk menciptakan pengalaman pengguna yang intuitif dan menarik, sehingga meningkatkan kenyamanan dan kemudahan dalam proses pemesanan kamar secara online.</p>
                 </div>
                 <!-- Android Studio -->
                 <div class="mb-12 p-4 md:w-1/2">
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="dist/img/portfolio/projek_android.png" alt="projek_android" width="w-full">
                     </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Membuat Aplikasi Mobile Android Tema Panti Yatim Piatu Menggunakan Android Studio</h3>
-                    <p class="font-medium text-base text-secondary text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere officiis fugiat error repellendus recusandae consectetur alias accusamus facilis maiores placeat aspernatur itaque laborum quasi, iusto soluta qui eum iste earum sint maxime minima cum officia corporis! Esse, quod ipsam, obcaecati repudiandae quaerat sed similique consectetur aliquid aspernatur quo numquam autem. </p>
+                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Membuat Aplikasi Mobile Android Tema Panti Yatim Piatu Menggunakan Android Studio</h3>
+                    <p class="font-medium text-base text-secondary text-justify dark:text-slate-400">
+                        Sebuah Project Ulangan Akhir Semester 5 Mata Kuliah Pemrograman Mobile yang ditugaskan untuk membuat sebuah aplikasi mobile android menggunakan Android Studio. Pada proyek UAS ini, setiap mahasiswa diberikan tugas dan tema masing-masing untuk membuat fitur pada bagian halaman aplikasi panti yatim piatu. Saya mendapatkan tema Data Ustad, yang mengharuskan saya untuk membuat sistem CRUD untuk menampilkan, menambahkan, mengedit, dan menghapus data Ustad. Sistem ini dirancang untuk memudahkan pengelolaan informasi ustad di panti yatim piatu, sehingga admin dapat dengan mudah mengatur data ustad yang ada. Aplikasi ini diharapkan dapat membantu operasional panti dalam mengelola data ustad dengan lebih efisien dan terorganisir.</p>
                 </div>
                 <!-- Multi Akun User -->
                 <div class="mb-12 p-4 md:w-1/2">
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="dist/img/portfolio/projekMultiAkunUser.png" alt="projekMultiAkunUser" width="w-full">
                     </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Membuat Web CRUD Multi Account User Sederhana Menggunakan PHP Native dan Bootstrap 5</h3>
-                    <p class="font-medium text-base text-secondary text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere officiis fugiat error repellendus recusandae consectetur alias accusamus facilis maiores placeat aspernatur itaque laborum quasi, iusto soluta qui eum iste earum sint maxime minima cum officia corporis! Esse, quod ipsam, obcaecati repudiandae quaerat sed similique consectetur aliquid aspernatur quo numquam autem. </p>
+                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Membuat Web CRUD Multi Account User Sederhana Menggunakan PHP Native dan Bootstrap 5</h3>
+                    <p class="font-medium text-base text-secondary text-justify dark:text-slate-400"> Sebuah Project Ulangan Akhir Semester 4 Mata Kuliah Pemrograman Web yang ditugaskan untuk membuat sebuah Web sistem informasi Multi Account User yang mengubah tampilan sesuai dengan level akun user yang didaftarkan. Pada proyek UAS ini, Saya memilih tema web berupa jual beli barang mahasiswa yang mana ada tampilan operator barang, tampilan mahasiswa dan tampilan admin. akun user operator barang tidak akan menampilkan tampilan halaman mahasiswa begitu juga sebaliknya namun untuk akun user admin bisa dapat melihat kedua tampilan akun user tersebut dan juga bisa membuat / registrasi akun baru dan memberikan level akun usernya. dalam pembuatan web ini saya menggunakan bahasa pemrograman php native dan juga untuk tampilan menggunakan template Bootstrap 5</p>
                 </div>
                 <!-- Rest API CRUD -->
                 <div class="mb-12 p-4 md:w-1/2">
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="dist/img/portfolio/projekRestAPI.png" alt="projekRestAPI" width="w-full">
                     </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Membuat CRUD HTTP REST-API untuk Web Multi Account User menggunakan Aplikasi POSTMAN</h3>
-                    <p class="font-medium text-base text-secondary text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere officiis fugiat error repellendus recusandae consectetur alias accusamus facilis maiores placeat aspernatur itaque laborum quasi, iusto soluta qui eum iste earum sint maxime minima cum officia corporis! Esse, quod ipsam, obcaecati repudiandae quaerat sed similique consectetur aliquid aspernatur quo numquam autem. </p>
+                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">CRUD HTTP REST-API untuk Web Multi Account User menggunakan Aplikasi POSTMAN</h3>
+                    <p class="font-medium text-base text-secondary text-justify dark:text-slate-400">Masih dalam Project Ulangan Akhir Semester 4 Mata Kuliah Pemrograman Web, saya membuat sebuah Web Sistem Informasi Multi Account User yang dicoba CRUD melalui HTTP REST API menggunakan aplikasi POSTMAN. Dalam proyek ini, saya mengimplementasikan berbagai fitur untuk mengelola akun pengguna, termasuk pembuatan, pembaruan, penghapusan, dan penampilan data pengguna. Pengujian dilakukan menggunakan POSTMAN untuk memastikan bahwa semua endpoint API berfungsi dengan benar dan dapat menangani permintaan HTTP dengan baik. Tujuan dari project ini adalah untuk mengembangkan keterampilan dalam membuat dan menguji API, serta mengelola data pengguna secara efisien dalam sebuah sistem informasi berbasis web.</p>
                 </div>
                 <!-- Sertifikasi Junior Networking -->
                 <div class="mb-12 p-4 md:w-1/2">
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="dist/img/portfolio/sertifikasi.png" alt="sertifikasi" width="w-full">
                     </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Membuat Alur Topologi Jaringan Router dan Switch Antara Autonomous System </h3>
-                    <p class="font-medium text-base text-secondary text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere officiis fugiat error repellendus recusandae consectetur alias accusamus facilis maiores placeat aspernatur itaque laborum quasi, iusto soluta qui eum iste earum sint maxime minima cum officia corporis! Esse, quod ipsam, obcaecati repudiandae quaerat sed similique consectetur aliquid aspernatur quo numquam autem. </p>
+                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Membuat Alur Topologi Jaringan Router dan Switch Antara Autonomous System </h3>
+                    <p class="font-medium text-base text-secondary text-justify dark:text-slate-400">
+                        Sebuah Project Membuat Alur Topologi Jaringan Router dan Switch antara Autonomous System menggunakan Cisco Packet Tracer sebagai syarat kelulusan pelatihan dan sertifikasi SKKNI BNSP sebagai Junior Network Administrator di BPPTIK Kominfo. Project ini mencakup Merancang pengalamatan jaringan, Memasang jaringan nirkabel, Mengkonfigurasi switch pada jaringan. dalam pelatihan ini diharapkan dapat meningkatkan kemampuan teknis dalam merancang dan mengimplementasikan jaringan komputer yang kompleks dan efisien. Selain itu, project ini juga bertujuan untuk memberikan pemahaman mendalam tentang konfigurasi dan manajemen perangkat jaringan, serta memastikan kesiapan dalam menghadapi tantangan networking di industri teknologi informasi.</p>
                 </div>
                 
             </div>
@@ -202,29 +225,29 @@
     <!-- Portfolio Section End -->
 
     <!-- Clients Section Start -->
-    <section id="clients" class="pt-36 pb-32 bg-slate-800">
+    <section id="clients" class="pt-36 pb-32 bg-slate-800 dark:bg-slate-600">
         <div class="container">
             <div class="w-full px-4">
                 <div class="mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2">Clients</h4>
-                    <h2 class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl">Yang Pernah Bekerjasama</h2>
-                    <p class="font-medium text-md text-secondary md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus commodi placeat autem.</p>
+                    <h2 class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-dark">Pengalaman Kerjasama</h2>
+                    <p class="font-medium text-md text-secondary md:text-lg dark:text-slate-400">Sebuah bentuk keikutsertaan dan keterlibatan saya dalam sebuah program, project, sertifikasi dan pelatihan dengan lembaga lembaga berikut.</p>
                 </div>
             </div>
 
             <div class="w-full px-4">
                 <div class="flex flex-wrap items-center justify-center">
-                    <a href="#" class="max-w-[140px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                    <a href="https://sumedangkab.go.id/" target="_blank" class="max-w-[140px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
                         <img src="dist/img/clients/LogoSumedang.svg" alt="LogoSumedang">
                     </a>
-                    <a href="#" class="max-w-[140px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-                        <img src="dist/img/clients/LogoMangunarga.svg" alt="LogoSumedang">
+                    <a href="https://www.instagram.com/desa.mangunarga1983?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="max-w-[140px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="dist/img/clients/LogoMangunarga.svg" alt="LogoMangunarga">
                     </a>
-                    <a href="#" class="max-w-[140px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-                        <img src="dist/img/clients/LogoLLDIKTI4.svg" alt="LogoSumedang">
+                    <a href="https://lldikti4.kemdikbud.go.id/" target="_blank" class="max-w-[140px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="dist/img/clients/LogoLLDIKTI4.svg" alt="LogoLLDIKTI4">
                     </a>
-                    <a href="#" class="max-w-[140px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-                        <img src="dist/img/clients/LogoKampusMerdeka.svg" alt="LogoSumedang">
+                    <a href="https://kampusmerdeka.kemdikbud.go.id/" target="_blank" class="max-w-[140px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="dist/img/clients/LogoKampusMerdeka.svg" alt="LogoKampusMerdeka">
                     </a>
                 </div>
             </div>
@@ -233,50 +256,50 @@
     <!-- Clients Section End -->   
      
     <!-- Blog Section Start -->
-    <section id="blog" class="pt-36 pb-32 bg-slate-100">
+    <section id="blog" class="pt-36 pb-32 bg-slate-100 dark:bg-dark">
         <div class="container">
             <div class="w-full px-4">
                 <div class="max-w-4xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2">Blog</h4>
-                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Tulisan Terkini</h2>
-                    <p class="font-medium text-md text-secondary md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dignissimos odit numquam dolores commodi necessitatibus.</p>
+                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Tulisan Terkini</h2>
+                    <p class="font-medium text-md text-secondary md:text-lg dark:text-slate-400">Sebuah Blog Berita dan Informasi Terkini Mengenai Keterlibatan dan Kehadiran Diri Saya.</p>
                 </div>
             </div>
 
             <div class="flex flex-wrap">
                 <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
-                        <img src="dist/img/splash1.jpg" alt="Programming" class="w-full">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-700">
+                        <img src="dist/img/splash11.jpg" alt="BIMTEK" class="w-full">
                         <div class="py-8 px-6">
                             <h3>
-                                <a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate">Tips Belajar Programming</a>
+                                <a href="https://ubs.ac.id/Halaman/berita/pkm-dosen-ftid-universitas-bani-saleh-membawa-inovasi-sidentah-ke-desa-mangunarga" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white">PKM DOSEN FTID UNIVERSITAS BANI SALEH MEMBAWA INOVASI SIDENTAH KE DESA MANGUNARGA</a>
                             </h3> 
-                            <p class="font-medium text-base text-secondary mb-6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, totam?</p>
-                            <a href="#" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
+                            <p class="font-medium text-base text-secondary mb-6 dark:text-slate-400 text-justify">Kegiatan ini juga menjadi momen penting dengan penyerahan produk inovasi serta penutupan Program Perguruan Tinggi Mandiri Bergotong Royong Membangun Desa (PTMGRMD) 2024 yang berlangsung selama beberapa bulan terakhir.</p>
+                            <a href="https://ubs.ac.id/Halaman/berita/pkm-dosen-ftid-universitas-bani-saleh-membawa-inovasi-sidentah-ke-desa-mangunarga" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
                         </div>
                     </div>
                 </div>
                 <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
-                        <img src="dist/img/splash2.jpg" alt="Battery" class="w-full">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-700">
+                        <img src="dist/img/splash22.png" alt="Battery" class="w-full">
                         <div class="py-8 px-6">
                             <h3>
-                                <a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate">Cara Menjaga Battery Health Pada Smarthphone</a>
+                                <a href="https://x.com/RadioElshinta/status/1761273186162033062?t=oBsrvKOLRxPGJ5K40qM_SQ&s=08" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white">Bencana Alam Puting Beliung Rancaekek</a>
                             </h3> 
-                            <p class="font-medium text-base text-secondary mb-6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, totam?</p>
-                            <a href="#" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
+                            <p class="font-medium text-base text-secondary mb-6 dark:text-slate-400">"Sejumlah relawan dan mahasiswa siang ini memberikan bantuan Trauma Healing bagi anak dan keluarga korban angin puting beliung acara berlangsung didalam tenda pengungsian di Desa Mangunarga Kecamatan Cimanggung, Sumedang, Jawa Barat." Ucap Kepala BPBD Sumedang, Atang Sutarno, Sabtu (24/2).</p>
+                            <a href="https://x.com/RadioElshinta/status/1761273186162033062?t=oBsrvKOLRxPGJ5K40qM_SQ&s=08" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
                         </div>
                     </div>
                 </div>
                 <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
-                        <img src="dist/img/splash3.jpg" alt="SSD" class="w-full">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-700">
+                        <img src="dist/img/splash33.jpg" alt="SSD" class="w-full">
                         <div class="py-8 px-6">
                             <h3>
-                                <a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate">Berapa Lama Kah Umur SSD?</a>
+                                <a href="https://sumedang.radarbandung.id/berita-utama/2024/06/16/program-ptmgrmd-di-sumedang-resmi-ditutup/#google_vignette" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white">Program PTMGRMD di Sumedang Resmi Ditutup</a>
                             </h3> 
-                            <p class="font-medium text-base text-secondary mb-6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, totam?</p>
-                            <a href="#" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
+                            <p class="font-medium text-base text-secondary mb-6 dark:text-slate-400">Program Perguruan Tinggi Mandiri Gotong-Royong Membangun Desa (PTMGRMD) yang berjalan kurang lebih selama 4 bulan dari 17 Februari hingga 17 Juni 2024 resmi ditutup Penjabat Bupati Sumedang Yudia Ramli di Aula Tampomas Pusat Pemerintahan Sumedang (PPS)...</p>
+                            <a href="https://sumedang.radarbandung.id/berita-utama/2024/06/16/program-ptmgrmd-di-sumedang-resmi-ditutup/#google_vignette" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
                         </div>
                     </div>
                 </div>
@@ -286,13 +309,13 @@
     <!-- Blog Section End -->
 
     <!-- Contact Section Start  -->
-    <section id="contact" class="pt-36 pb-32">
+    <section id="contact" class="pt-36 pb-32 dark:bg-slate-800">
         <div class="container">
             <div class="w-full px-4">
                 <div class="max-w-4xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2">Contact</h4>
-                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Hubungi Kami</h2>
-                    <p class="font-medium text-md text-secondary md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dignissimos odit numquam dolores commodi necessitatibus.</p>
+                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Hubungi Kami</h2>
+                    <p class="font-medium text-md text-secondary md:text-lg dark:text-slate-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dignissimos odit numquam dolores commodi necessitatibus.</p>
                 </div>
             </div>
             <form>
@@ -326,8 +349,9 @@
                     <h2 class="font-bold text-4xl text-white mb-5 lg:text-3xl md:text-xl">Danendra.S.B</h2>
                     <h3 class="font-bold text-2xl mb-2 md:text-xl">Hubungi Kami</h3>
                     <p class="sm:text-xl md:text-xs lg:text-sm xl:text-xl">danendra.saskara@gmail.com</p>
-                    <p>Jl. Setiadarma 2 No.07</p>
+                    <p>Tambun Selatan</p>
                     <p>Kabupaten Bekasi</p>
+                    <p>Jawa Barat, 17510</p>
                 </div>
                 <div class="w-full px-4 mb-12 mx-auto md:w-1/4 xl:w-1/4 lg:w-1/4">
                     <h3 class="font-semibold text-xl text-white mb-5">Kategori Tulisan</h3>
@@ -433,6 +457,16 @@
         </div>
     </footer>
     <!-- Footer Section End -->
+
+    <!-- Back to top start -->
+
+    <a href="#home" class="fixed z-[9999] bottom-4 right-4 h-14 w-14 bg-primary rounded-full p-4 hidden justify-center items-center hover:animate-pulse" id="to-top">
+        <span class="block w-5 h-5 border-t-2 border-l-2 mt-2 rotate-45"></span>
+    </a>
+
+    <!-- Back to top end -->
+
+    
 
 <script src="dist/js/script.js"></script>
 </body>
